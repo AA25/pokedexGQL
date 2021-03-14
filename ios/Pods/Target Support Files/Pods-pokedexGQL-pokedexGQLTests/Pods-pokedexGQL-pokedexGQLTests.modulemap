@@ -1,0 +1,6 @@
+module Pods_pokedexGQL_pokedexGQLTests {
+  umbrella header "Pods-pokedexGQL-pokedexGQLTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

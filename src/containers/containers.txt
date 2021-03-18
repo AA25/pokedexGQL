@@ -1,0 +1,1 @@
+You can put you all screen-based components inside here (Eg - SplashScreen, HomeScreen).

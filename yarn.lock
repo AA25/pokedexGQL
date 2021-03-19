@@ -2689,7 +2689,7 @@
   dependencies:
     "eslint-plugin-react-native-globals" "^0.1.1"
 
-"eslint-plugin-react@7.19.0":
+"eslint-plugin-react@^7.19.0", "eslint-plugin-react@7.19.0":
   "integrity" "sha512-SPT8j72CGuAP+JFbT0sJHOB80TX/pu44gQ4vXH/cq+hQTiY2PuZ6IHkqXJV6x1b28GDdo1lbInjKUrrdUf0LOQ=="
   "resolved" "https://registry.npmjs.org/eslint-plugin-react/-/eslint-plugin-react-7.19.0.tgz"
   "version" "7.19.0"

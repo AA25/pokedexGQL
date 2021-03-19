@@ -8,11 +8,7 @@ export const SplashScreen = () => {
   return (
     <View style={styles.root}>
       <Text>Splash Screen</Text>
-      <Button
-        title="Home"
-        color="#710ce3"
-        onPress={() => Navigation.setRoot(mainRoot)}
-      />
+      <Button title="Home" color="#710ce3" onPress={() => Navigation.setRoot(mainRoot)} />
     </View>
   );
 };

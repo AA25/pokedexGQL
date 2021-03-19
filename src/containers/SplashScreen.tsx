@@ -19,7 +19,7 @@ export const SplashScreen = () => {
 SplashScreen.options = {
   topBar: {
     title: {
-      text: 'Splash Title',
+      text: "Splash Title",
     },
   },
 };

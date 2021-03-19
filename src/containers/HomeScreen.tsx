@@ -13,7 +13,7 @@ export const HomeScreen = (props) => {
         onPress={() =>
           Navigation.push(props.componentId, {
             component: {
-              name: 'Settings',
+              name: "Settings",
             },
           })
         }
@@ -24,7 +24,7 @@ export const HomeScreen = (props) => {
 HomeScreen.options = {
   topBar: {
     title: {
-      text: 'Home Title',
+      text: "Home Title",
     },
   },
 };

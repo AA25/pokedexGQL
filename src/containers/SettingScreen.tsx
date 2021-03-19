@@ -13,7 +13,7 @@ export const SettingsScreen = () => {
 SettingsScreen.options = {
   topBar: {
     title: {
-      text: 'Settings Title',
+      text: "Settings Title",
     },
   },
 };

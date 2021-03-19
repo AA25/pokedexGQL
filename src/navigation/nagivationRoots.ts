@@ -1,7 +1,7 @@
 const entryRoot = {
   root: {
     component: {
-      name: 'Splash',
+      name: "Splash",
     },
   },
 };
@@ -12,7 +12,7 @@ const mainRoot = {
       children: [
         {
           component: {
-            name: 'Home',
+            name: "Home",
           },
         },
       ],

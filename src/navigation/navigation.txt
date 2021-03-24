@@ -1,0 +1,1 @@
+You project base navigation goes here. You can create stack navigator and export it to your application.

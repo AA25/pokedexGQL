@@ -12,6 +12,7 @@ export const SplashScreen = () => {
     </View>
   );
 };
+
 SplashScreen.options = {
   topBar: {
     title: {

@@ -10,6 +10,7 @@ export const SettingsScreen = () => {
     </View>
   );
 };
+
 SettingsScreen.options = {
   topBar: {
     title: {

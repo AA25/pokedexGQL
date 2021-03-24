@@ -11,7 +11,5 @@ module.exports = {
         "react",
         "react-hooks",
     ],
-    rules: {
-        "react/prop-types": "off" // TODO: Understand later
-    },
+    rules: {},
 };

@@ -1,4 +1,4 @@
-import {appColours} from "../styles/colours";
+import { appColours } from "../styles/colours";
 
 export const navigationOption = {
   statusBar: {

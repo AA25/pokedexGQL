@@ -1,6 +1,8 @@
+import {appColours} from "../styles/colours";
+
 export const navigationOption = {
   statusBar: {
-    backgroundColor: "#4d089a",
+    backgroundColor: appColours.pokedexRed,
   },
   topBar: {
     title: {

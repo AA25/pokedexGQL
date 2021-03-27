@@ -1,5 +1,6 @@
 import { StyleSheet, View } from "react-native";
 import React from "react";
+import {appColours} from "../styles/colours";
 
 export const PokedexFooter = () => {
   return (
@@ -17,7 +18,7 @@ const pokedexBottom = StyleSheet.create({
   thingy: {
     height: 15,
     width: 150,
-    backgroundColor: "#AC193C",
+    backgroundColor: appColours.pokedexRedOffset,
     borderWidth: StyleSheet.hairlineWidth,
     borderColor: "black",
     borderRadius: 20,

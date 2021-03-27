@@ -23,7 +23,7 @@ const pokedexHeaderStyle = StyleSheet.create({
     backgroundColor: appColours.pokedexRed,
     // height: 90,
     padding: 10,
-    borderColor: "#AC193C",
+    borderColor: appColours.pokedexRedOffset,
     borderBottomWidth: 3,
     borderTopWidth: 1,
   },

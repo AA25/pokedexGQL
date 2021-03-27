@@ -2,6 +2,7 @@ import { Image, Pressable, StyleSheet, Text, View } from "react-native";
 import { Navigation } from "react-native-navigation";
 import { mainRoot } from "../navigation/nagivationRoots";
 import React from "react";
+import {appColours} from "../styles/colours";
 
 const splashImage = require("../assets/images/PokemonGqlSplashAlt.png");
 
@@ -31,7 +32,7 @@ const introductionStyle = StyleSheet.create({
   },
   startButton: {
     alignItems: "center",
-    backgroundColor: "#AC193C",
+    backgroundColor: appColours.pokedexRedOffset,
     padding: 15,
     borderRadius: 10,
 

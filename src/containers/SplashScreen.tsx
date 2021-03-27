@@ -52,12 +52,19 @@ const introductionStyle = StyleSheet.create({
     backgroundColor: "#AC193C",
     padding: 15,
     borderRadius: 10,
-    // borderWidth: StyleSheet.hairlineWidth,
-    // borderColor: "white"
+
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 12,
+    },
+    shadowOpacity: 0.58,
+    shadowRadius: 16.0,
+
+    elevation: 24,
   },
   buttonText: {
-    fontFamily: "'WHITRABT', monospace",
-    fontWeight: "bold",
+    fontFamily: "WHITRABT",
     fontSize: 18,
     color: "white",
   },

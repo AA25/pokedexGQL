@@ -1,6 +1,6 @@
 import { StyleSheet, View } from "react-native";
 import React from "react";
-import {appColours} from "../styles/colours";
+import { appColours } from "../styles/colours";
 
 export const PokedexFooter = () => {
   return (

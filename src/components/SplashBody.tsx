@@ -2,7 +2,7 @@ import { Image, Pressable, StyleSheet, Text, View } from "react-native";
 import { Navigation } from "react-native-navigation";
 import { mainRoot } from "../navigation/nagivationRoots";
 import React from "react";
-import {appColours} from "../styles/colours";
+import { appColours } from "../styles/colours";
 
 const splashImage = require("../assets/images/PokemonGqlSplashAlt.png");
 

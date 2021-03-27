@@ -1,12 +1,11 @@
-import { styles } from "../styles/styles";
-import { Button, Text, View } from "react-native";
+import { Button, StyleSheet, Text, View } from "react-native";
 import { Navigation } from "react-native-navigation";
 import React from "react";
 import PropTypes from "prop-types";
 
 export const HomeScreen = (props) => {
   return (
-    <View style={styles.root}>
+    <View style={homeScreenStyle.root}>
       <Text>Home Screen</Text>
       <Button
         title="Push Settings Screen"
@@ -34,3 +33,12 @@ HomeScreen.options = {
     },
   },
 };
+
+const homeScreenStyle = StyleSheet.create({
+  root: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "whitesmoke",
+  },
+});

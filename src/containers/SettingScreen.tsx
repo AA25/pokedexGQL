@@ -1,11 +1,10 @@
-import { styles } from "../styles/styles";
-import { Text, View } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 
 // Settings screen declaration - this is the screen we'll be pushing into the stack
 export const SettingsScreen = () => {
   return (
-    <View style={styles.root}>
+    <View style={settingScreenStyle.root}>
       <Text>Settings Screen</Text>
     </View>
   );
@@ -18,3 +17,12 @@ SettingsScreen.options = {
     },
   },
 };
+
+const settingScreenStyle = StyleSheet.create({
+  root: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "whitesmoke",
+  },
+});

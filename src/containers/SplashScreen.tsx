@@ -1,14 +1,16 @@
 import React from "react";
-import { styles } from "../styles/styles";
-import { Button, Text, View } from "react-native";
-import { Navigation } from "react-native-navigation";
-import { mainRoot } from "../navigation/nagivationRoots";
+import { View } from "react-native";
+import { PokedexHeader } from "../components/PokedexHeader";
+import { splashScreenStyle } from "../styles/splashScreenStyle";
+import { SplashBody } from "../components/SplashBody";
+import { PokedexFooter } from "../components/pokdedexFooter";
 
 export const SplashScreen = () => {
   return (
-    <View style={styles.root}>
-      <Text>Splash Screen</Text>
-      <Button title="Home" color="#710ce3" onPress={() => Navigation.setRoot(mainRoot)} />
+    <View style={splashScreenStyle.screenContainer}>
+      <PokedexHeader />
+      <SplashBody />
+      <PokedexFooter />
     </View>
   );
 };

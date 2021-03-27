@@ -1,7 +1,7 @@
 import { StyleSheet } from "react-native";
 import { appColours } from "./colours";
 
-export const splashStyle = StyleSheet.create({
+export const splashScreenStyle = StyleSheet.create({
   screenContainer: {
     flex: 1,
     flexDirection: "column",

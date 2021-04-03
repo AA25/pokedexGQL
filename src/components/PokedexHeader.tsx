@@ -5,10 +5,10 @@ import { appColours } from "../styles/colours";
 export const PokedexHeader = () => {
   return (
     <View style={pokedexHeaderStyle.container}>
-      <Image source={require("../assets/images/mainLed.png")} style={pokedexHeaderStyle.mainLedImg} />
-      <Image source={require("../assets/images/miniLed1.png")} style={pokedexHeaderStyle.miniLedImg} />
-      <Image source={require("../assets/images/miniLed2.png")} style={pokedexHeaderStyle.miniLedImg} />
-      <Image source={require("../assets/images/miniLed3.png")} style={pokedexHeaderStyle.miniLedImg} />
+      <Image source={require("../assets/images/mainLedBlue.png")} style={pokedexHeaderStyle.mainLedImg} />
+      <Image source={require("../assets/images/miniLedRed.png")} style={pokedexHeaderStyle.miniLedImg} />
+      <Image source={require("../assets/images/miniLedYellow.png")} style={pokedexHeaderStyle.miniLedImg} />
+      <Image source={require("../assets/images/miniLedGreen.png")} style={pokedexHeaderStyle.miniLedImg} />
       {/*<View style={pokedexHeaderStyle.mainLed}></View>*/}
       {/*<View style={pokedexHeaderStyle.miniLedA}></View>*/}
       {/*<View style={pokedexHeaderStyle.miniLedB}></View>*/}

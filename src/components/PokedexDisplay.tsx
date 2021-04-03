@@ -5,7 +5,7 @@ import {appColours} from "../styles/colours";
 const displayImage = require("../assets/images/pikachuInnerScreen.png")
 const hamburgerIcon = require("../assets/images/hamburgerIcon.png")
 
-export const PokedexInnerScreen = () => {
+export const PokedexDisplay = () => {
     return (
         <View style={PokedexInnerScreenStyle.container}>
             <View style={PokedexInnerScreenStyle.frameContainer}>

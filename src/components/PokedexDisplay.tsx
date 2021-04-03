@@ -27,6 +27,13 @@ export const PokedexDisplay = () => {
   );
 };
 
+const PokemonDisplayColours = {
+  red: "#c40201",
+  green: "#99cb9a",
+  greenOffset: "#237f11",
+  grey: "#dedede"
+}
+
 const PokedexInnerScreenStyle = StyleSheet.create({
   container: {
     flex: 1,
@@ -37,7 +44,7 @@ const PokedexInnerScreenStyle = StyleSheet.create({
   },
   frameContainer: {
     flexDirection: "column",
-    backgroundColor: "#dedede",
+    backgroundColor: PokemonDisplayColours.grey,
     width: 220,
     height: 170,
     borderWidth: 1.5,
@@ -52,7 +59,7 @@ const PokedexInnerScreenStyle = StyleSheet.create({
     padding: 5,
   },
   displayContainer: {
-    backgroundColor: "#99cb9a",
+    backgroundColor: PokemonDisplayColours.green,
     height: 120,
     marginLeft: 20,
     marginRight: 20,
@@ -60,7 +67,7 @@ const PokedexInnerScreenStyle = StyleSheet.create({
     alignItems: "center",
     borderWidth: 1.5,
     borderStyle: "solid",
-    borderColor: "#237f11",
+    borderColor: PokemonDisplayColours.greenOffset,
     borderRadius: 5,
   },
   frameBottom: {
@@ -81,7 +88,7 @@ const PokedexInnerScreenStyle = StyleSheet.create({
   miniLedTop: {
     width: 10,
     height: 10,
-    backgroundColor: "#c40201",
+    backgroundColor: PokemonDisplayColours.red,
     borderWidth: 1.5,
     borderStyle: "solid",
     borderColor: "black",
@@ -91,7 +98,7 @@ const PokedexInnerScreenStyle = StyleSheet.create({
   miniLedBottom: {
     width: 20,
     height: 20,
-    backgroundColor: "#c40201",
+    backgroundColor: PokemonDisplayColours.red,
     borderWidth: 1.5,
     borderStyle: "solid",
     borderColor: "black",

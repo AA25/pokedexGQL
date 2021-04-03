@@ -9,19 +9,26 @@ export const PokedexDisplay = () => {
   return (
     <View style={PokedexInnerScreenStyle.container}>
       <View style={PokedexInnerScreenStyle.frameContainer}>
+
+        {/* Section above Display */}
         <View style={PokedexInnerScreenStyle.frameTop}>
           <View style={PokedexInnerScreenStyle.miniLedTop} />
           <View style={PokedexInnerScreenStyle.miniLedTop} />
         </View>
+
+        {/* Display */}
         <View style={PokedexInnerScreenStyle.displayContainer}>
           <View style={PokedexInnerScreenStyle.display}>
             <Image source={displayImage} style={PokedexInnerScreenStyle.displayImage} />
           </View>
         </View>
+
+        {/* Section below Display */}
         <View style={PokedexInnerScreenStyle.frameBottom}>
           <View style={PokedexInnerScreenStyle.miniLedBottom} />
           <Image source={hamburgerIcon} style={PokedexInnerScreenStyle.hamburgerIcon} />
         </View>
+
       </View>
     </View>
   );

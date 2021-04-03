@@ -9,7 +9,6 @@ export const PokedexDisplay = () => {
   return (
     <View style={PokedexInnerScreenStyle.container}>
       <View style={PokedexInnerScreenStyle.frameContainer}>
-
         {/* Section above Display */}
         <View style={PokedexInnerScreenStyle.frameTop}>
           <View style={PokedexInnerScreenStyle.miniLedTop} />
@@ -28,7 +27,6 @@ export const PokedexDisplay = () => {
           <View style={PokedexInnerScreenStyle.miniLedBottom} />
           <Image source={hamburgerIcon} style={PokedexInnerScreenStyle.hamburgerIcon} />
         </View>
-
       </View>
     </View>
   );
@@ -38,8 +36,8 @@ const PokemonDisplayColours = {
   red: "#c40201",
   green: "#99cb9a",
   greenOffset: "#237f11",
-  grey: "#dedede"
-}
+  grey: "#dedede",
+};
 
 const PokedexInnerScreenStyle = StyleSheet.create({
   container: {

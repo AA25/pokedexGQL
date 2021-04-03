@@ -7,7 +7,6 @@ const searchIcon = require("../assets/images/search.png");
 export const PokedexSearch = () => {
   return (
     <View style={PokedexSearchStyle.container}>
-
       {/* Info text */}
       <View style={PokedexSearchStyle.additionalDataTextContainer}>
         <Text style={PokedexSearchStyle.additionalDataText}>
@@ -17,7 +16,10 @@ export const PokedexSearch = () => {
 
       {/* Rows of buttons to add additional data to query */}
       <View style={PokedexSearchStyle.flexDirectionRow}>
-        <Pressable onPress={() => {}} style={[PokedexSearchStyle.additionalDataButton, { backgroundColor: "powderblue" }]}>
+        <Pressable
+          onPress={() => {}}
+          style={[PokedexSearchStyle.additionalDataButton, { backgroundColor: "powderblue" }]}
+        >
           <Image source={pokeballImage} style={PokedexSearchStyle.buttonImg} />
           <Text style={PokedexSearchStyle.additionalDataButtonText}>PLACEHOLDER</Text>
         </Pressable>
@@ -28,7 +30,10 @@ export const PokedexSearch = () => {
       </View>
 
       <View style={PokedexSearchStyle.flexDirectionRow}>
-        <Pressable onPress={() => {}} style={[PokedexSearchStyle.additionalDataButton, { backgroundColor: "steelblue" }]}>
+        <Pressable
+          onPress={() => {}}
+          style={[PokedexSearchStyle.additionalDataButton, { backgroundColor: "steelblue" }]}
+        >
           <Image source={pokeballImage} style={PokedexSearchStyle.buttonImg} />
           <Text style={PokedexSearchStyle.additionalDataButtonText}>PLACEHOLDER</Text>
         </Pressable>
@@ -58,7 +63,7 @@ export const PokedexSearch = () => {
 
 const PokedexSearchStyle = StyleSheet.create({
   flexDirectionRow: {
-    flexDirection: "row"
+    flexDirection: "row",
   },
   container: {
     flex: 1.5,
@@ -100,7 +105,6 @@ const PokedexSearchStyle = StyleSheet.create({
     opacity: 0.2,
   },
 });
-
 
 const searchComponentStyle = StyleSheet.create({
   container: {

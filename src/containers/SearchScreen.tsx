@@ -1,17 +1,17 @@
-import { Button, StyleSheet, Text, View } from "react-native";
-import { Navigation } from "react-native-navigation";
+import { StyleSheet, View } from "react-native";
 import React from "react";
 import PropTypes from "prop-types";
-import {appColours} from "../styles/colours";
-import {PokedexHeader} from "../components/PokedexHeader";
+import { appColours } from "../styles/colours";
+import { PokedexHeader } from "../components/PokedexHeader";
+import { PokedexDisplay } from "../components/PokedexDisplay";
+import { PokedexSearch } from "../components/PokedexSearch";
 
-export const SearchScreen = (props) => {
+export const SearchScreen = () => {
   return (
-    <View style={searchScreenStyle.screenContainer}>
-        <PokedexHeader />
-        <View>
-            <Text>Home Screen</Text>
-        </View>
+    <View style={searchScreenStyle.container}>
+      <PokedexHeader />
+      <PokedexDisplay />
+      <PokedexSearch />
     </View>
   );
 };
@@ -29,11 +29,10 @@ SearchScreen.options = {
 };
 
 const searchScreenStyle = StyleSheet.create({
-    screenContainer: {
-        flex: 1,
-        flexDirection: "column",
-        justifyContent: "flex-start",
-        alignItems: "stretch",
-        backgroundColor: "whitesmoke",
-    },
+  container: {
+    flex: 1,
+    flexDirection: "column",
+    justifyContent: "space-between",
+    backgroundColor: appColours.pokedexRed,
+  },
 });

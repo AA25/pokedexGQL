@@ -1,5 +1,6 @@
 import { Image, Pressable, StyleSheet, Text, View } from "react-native";
 import React from "react";
+import { appColours } from "../styles/colours";
 
 const pokeballImage = require("../assets/images/pokeBallAlt.png");
 const searchIcon = require("../assets/images/search.png");
@@ -68,7 +69,7 @@ const PokedexSearchStyle = StyleSheet.create({
   container: {
     flex: 1.5,
     flexDirection: "column",
-    backgroundColor: "#AC193C",
+    backgroundColor: appColours.pokedexRedOffset,
     margin: 5,
     borderRadius: 5,
   },
@@ -117,7 +118,7 @@ const searchComponentStyle = StyleSheet.create({
   },
   button: {
     padding: 15,
-    backgroundColor: "#d7253d",
+    backgroundColor: appColours.pokedexRed,
     borderRadius: 30,
   },
   buttonText: {

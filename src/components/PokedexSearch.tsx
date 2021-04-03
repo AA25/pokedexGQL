@@ -1,6 +1,7 @@
 import { Image, Pressable, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { appColours } from "../styles/colours";
+import { appStyles } from "../styles/styles";
 
 const pokeballImage = require("../assets/images/pokeBallAlt.png");
 const searchIcon = require("../assets/images/search.png");
@@ -54,8 +55,8 @@ export const PokedexSearch = () => {
 
       {/* Search Button */}
       <View style={searchComponentStyle.container}>
-        <Pressable onPress={() => {}} style={searchComponentStyle.button}>
-          <Image source={searchIcon} style={{ height: 25, width: 25 }} />
+        <Pressable onPress={() => {}} style={[searchComponentStyle.button, appStyles.buttonShadow]}>
+          <Image source={searchIcon} style={searchComponentStyle.buttonImage} />
         </Pressable>
       </View>
     </View>
@@ -125,5 +126,9 @@ const searchComponentStyle = StyleSheet.create({
     color: "white",
     fontSize: 20,
     fontFamily: "WHITRABT",
+  },
+  buttonImage: {
+    height: 25,
+    width: 25,
   },
 });

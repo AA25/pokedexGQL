@@ -6,12 +6,12 @@ import { PokedexHeader } from "../components/PokedexHeader";
 import { PokedexDisplay } from "../components/PokedexDisplay";
 import { PokedexSearch } from "../components/PokedexSearch";
 
-export const SearchScreen = () => {
+export const SearchScreen = (props) => {
   return (
     <View style={searchScreenStyle.container}>
       <PokedexHeader />
       <PokedexDisplay />
-      <PokedexSearch />
+      <PokedexSearch componentId={props.componentId}/>
     </View>
   );
 };
@@ -23,7 +23,7 @@ SearchScreen.propTypes = {
 SearchScreen.options = {
   topBar: {
     title: {
-      text: "Home Title",
+      text: "Search Title",
     },
   },
 };

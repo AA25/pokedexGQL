@@ -11,9 +11,11 @@ import { Navigation } from "react-native-navigation";
 import { navigationOption } from "./src/navigation/navigationOptions";
 import { SearchScreen } from "./src/containers/SearchScreen";
 import { SplashScreen } from "./src/containers/SplashScreen";
+import { ResultsScreen } from "./src/containers/ResultsScreen";
 
-Navigation.registerComponent("Home", () => SearchScreen);
 Navigation.registerComponent("Splash", () => SplashScreen);
+Navigation.registerComponent("Search", () => SearchScreen);
+Navigation.registerComponent("Results", () => ResultsScreen);
 
 Navigation.events().registerAppLaunchedListener(async () => {
   await Navigation.setRoot(entryRoot);

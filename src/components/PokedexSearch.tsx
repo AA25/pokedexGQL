@@ -2,11 +2,13 @@ import { Image, Pressable, StyleSheet, Text, View } from "react-native";
 import React, { useState } from "react";
 import { appColours } from "../styles/colours";
 import { appStyles } from "../styles/styles";
+import { Navigation } from "react-native-navigation";
+import PropTypes from "prop-types";
 
 const pokeballImage = require("../assets/images/pokeBallAlt.png");
 const searchIcon = require("../assets/images/search.png");
 
-export const PokedexSearch = () => {
+export const PokedexSearch = (props) => {
   const [additionalDataA, pressedAdditionalDataA] = useState(false);
   const [additionalDataB, pressedAdditionalDataB] = useState(false);
   const [additionalDataC, pressedAdditionalDataC] = useState(false);
@@ -134,12 +136,25 @@ export const PokedexSearch = () => {
 
       {/* Search Button */}
       <View style={searchComponentStyle.container}>
-        <Pressable onPress={() => {}} style={[searchComponentStyle.button, appStyles.buttonShadow]}>
+        <Pressable
+          onPress={() =>
+            Navigation.push(props.componentId, {
+              component: {
+                name: "Results",
+              },
+            })
+          }
+          style={[searchComponentStyle.button, appStyles.buttonShadow]}
+        >
           <Image source={searchIcon} style={searchComponentStyle.buttonImage} />
         </Pressable>
       </View>
     </View>
   );
+};
+
+PokedexSearch.propTypes = {
+  componentId: PropTypes.string,
 };
 
 const PokedexSearchStyle = StyleSheet.create({

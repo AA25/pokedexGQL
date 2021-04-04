@@ -3,6 +3,7 @@ interface IAppColours {
   pokedexRedOffset: string;
   pokedexYellow: string;
   pokedexBlue: string;
+  pokedexGray: string;
 }
 
 export const appColours: IAppColours = {
@@ -10,4 +11,6 @@ export const appColours: IAppColours = {
   pokedexRedOffset: "#AC193C",
   pokedexYellow: "#ffe031",
   pokedexBlue: "#3060b4",
+  pokedexGray: "#3f3333",
+};
 };

@@ -219,7 +219,7 @@ const searchComponentStyle = StyleSheet.create({
   },
   button: {
     padding: 15,
-    backgroundColor: appColours.pokedexRed,
+    backgroundColor: appColours.pokedexGray,
     borderRadius: 30,
   },
   buttonText: {

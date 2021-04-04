@@ -11,7 +11,7 @@ export const SearchScreen = (props) => {
     <View style={searchScreenStyle.container}>
       <PokedexHeader />
       <PokedexDisplay />
-      <PokedexSearch componentId={props.componentId}/>
+      <PokedexSearch componentId={props.componentId} />
     </View>
   );
 };

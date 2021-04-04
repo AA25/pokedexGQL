@@ -13,4 +13,11 @@ export const appColours: IAppColours = {
   pokedexBlue: "#3060b4",
   pokedexGray: "#3f3333",
 };
+
+export const typeColourIndex = {
+  Water: "darkturquoise",
+  Fire: "tomato",
+  Grass: "seagreen",
+  Electric: "gold",
+  Default: "pink",
 };

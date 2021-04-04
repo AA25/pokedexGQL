@@ -1,9 +1,9 @@
 import React from "react";
-import { View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import { PokedexHeader } from "../components/PokedexHeader";
-import { splashScreenStyle } from "../styles/splashScreenStyle";
 import { SplashBody } from "../components/SplashBody";
 import { PokedexFooter } from "../components/pokdedexFooter";
+import { appColours } from "../styles/colours";
 
 export const SplashScreen = () => {
   return (
@@ -22,3 +22,13 @@ SplashScreen.options = {
     },
   },
 };
+
+const splashScreenStyle = StyleSheet.create({
+  screenContainer: {
+    flex: 1,
+    flexDirection: "column",
+    justifyContent: "flex-start",
+    alignItems: "stretch",
+    backgroundColor: appColours.pokedexRed,
+  },
+});

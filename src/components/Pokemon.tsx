@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import { typeColourIndex } from "../styles/colours";
 
 const containerBackground = require("../assets/images/pokemonContainerBackground.png");
+let typeKey = 1;
 
 const determineBackgroundColourByType = (type) => {
   if (typeColourIndex[type]) {
@@ -21,7 +22,7 @@ export const Pokemon = ({ id, name, imageSource, types }) => {
         <Text style={styles.id}>#{id}</Text>
         <View style={styles.type}>
           {types.map((type) => (
-            <Text style={styles.typeText} key={id}>
+            <Text style={styles.typeText} key={typeKey++}>
               {type}
             </Text>
           ))}
@@ -50,6 +51,7 @@ const styles = StyleSheet.create({
     margin: 5,
     right: 0,
     bottom: 0,
+    resizeMode: "contain",
   },
   containerBackgroundImage: {
     height: 100,
@@ -98,6 +100,6 @@ const styles = StyleSheet.create({
     borderColor: "white",
     borderRadius: 10,
     width: 60,
-    marginBottom: 2,
+    marginTop: 5,
   },
 });

@@ -135,7 +135,7 @@ export const PokedexSearch = (props) => {
       </View>
 
       {/* Search Button */}
-      <View style={searchComponentStyle.container}>
+      <View style={appStyles.floatingCornerButtonContainer}>
         <Pressable
           onPress={() =>
             Navigation.push(props.componentId, {
@@ -144,9 +144,9 @@ export const PokedexSearch = (props) => {
               },
             })
           }
-          style={[searchComponentStyle.button, appStyles.buttonShadow]}
+          style={[appStyles.floatingCornerButton, appStyles.buttonShadow]}
         >
-          <Image source={searchIcon} style={searchComponentStyle.buttonImage} />
+          <Image source={searchIcon} style={appStyles.floatingCornerButtonImg} />
         </Pressable>
       </View>
     </View>
@@ -205,30 +205,5 @@ const PokedexSearchStyle = StyleSheet.create({
   },
   buttonImgInactive: {
     opacity: 0.2,
-  },
-});
-
-const searchComponentStyle = StyleSheet.create({
-  container: {
-    position: "absolute",
-    zIndex: 99, //iOS
-    elevation: 99, //Android
-    margin: 20,
-    right: 0,
-    bottom: 0,
-  },
-  button: {
-    padding: 15,
-    backgroundColor: appColours.pokedexGray,
-    borderRadius: 30,
-  },
-  buttonText: {
-    color: "white",
-    fontSize: 20,
-    fontFamily: "WHITRABT",
-  },
-  buttonImage: {
-    height: 25,
-    width: 25,
   },
 });

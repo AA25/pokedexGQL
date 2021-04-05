@@ -31,10 +31,10 @@ export const PokedexSearch = (props) => {
         break;
       case "additionalDataAll":
         pressedAdditionalDataAll(!additionalDataAll);
-        pressedAdditionalDataA(!additionalDataA);
-        pressedAdditionalDataB(!additionalDataB);
-        pressedAdditionalDataC(!additionalDataC);
-        pressedAdditionalDataD(!additionalDataD);
+        pressedAdditionalDataA(!additionalDataAll);
+        pressedAdditionalDataB(!additionalDataAll);
+        pressedAdditionalDataC(!additionalDataAll);
+        pressedAdditionalDataD(!additionalDataAll);
         break;
     }
   };
@@ -54,7 +54,7 @@ export const PokedexSearch = (props) => {
           onPress={() => {
             changeButtonActivity("additionalDataA");
           }}
-          style={[PokedexSearchStyle.additionalDataButton, appStyles.buttonShadow, { backgroundColor: "powderblue" }]}
+          style={[PokedexSearchStyle.additionalDataButton, appStyles.buttonShadow]}
         >
           <Image
             source={pokeballImage}
@@ -69,7 +69,7 @@ export const PokedexSearch = (props) => {
           onPress={() => {
             changeButtonActivity("additionalDataB");
           }}
-          style={[PokedexSearchStyle.additionalDataButton, appStyles.buttonShadow, { backgroundColor: "skyblue" }]}
+          style={[PokedexSearchStyle.additionalDataButton, appStyles.buttonShadow]}
         >
           <Image
             source={pokeballImage}
@@ -87,7 +87,7 @@ export const PokedexSearch = (props) => {
           onPress={() => {
             changeButtonActivity("additionalDataC");
           }}
-          style={[PokedexSearchStyle.additionalDataButton, appStyles.buttonShadow, { backgroundColor: "steelblue" }]}
+          style={[PokedexSearchStyle.additionalDataButton, appStyles.buttonShadow]}
         >
           <Image
             source={pokeballImage}
@@ -102,7 +102,7 @@ export const PokedexSearch = (props) => {
           onPress={() => {
             changeButtonActivity("additionalDataD");
           }}
-          style={[PokedexSearchStyle.additionalDataButton, appStyles.buttonShadow, { backgroundColor: "pink" }]}
+          style={[PokedexSearchStyle.additionalDataButton, appStyles.buttonShadow]}
         >
           <Image
             source={pokeballImage}
@@ -120,18 +120,17 @@ export const PokedexSearch = (props) => {
           onPress={() => {
             changeButtonActivity("additionalDataAll");
           }}
-          style={[PokedexSearchStyle.additionalDataButton, appStyles.buttonShadow, { backgroundColor: "green" }]}
+          style={[
+            PokedexSearchStyle.additionalDataButton,
+            PokedexSearchStyle.allSelectorButton,
+            appStyles.buttonShadow,
+          ]}
         >
-          <Image
-            source={pokeballImage}
-            style={[
-              PokedexSearchStyle.buttonImg,
-              additionalDataAll ? PokedexSearchStyle.buttonImgActive : PokedexSearchStyle.buttonImgInactive,
-            ]}
-          />
-          <Text style={PokedexSearchStyle.additionalDataButtonText}>PLACEHOLDER</Text>
+          <Text style={PokedexSearchStyle.additionalDataButtonText}>
+            {additionalDataAll ? "DESELECT ALL" : "SELECT ALL"}
+          </Text>
         </Pressable>
-        <View style={PokedexSearchStyle.additionalDataButton} />
+        <View style={[PokedexSearchStyle.additionalDataButton, PokedexSearchStyle.transparent]} />
       </View>
 
       {/* Search Button */}
@@ -176,6 +175,7 @@ const PokedexSearchStyle = StyleSheet.create({
     fontSize: 18,
     textAlign: "center",
     fontFamily: "WHITRABT",
+    lineHeight: 18,
   },
   additionalDataButton: {
     flex: 1,
@@ -184,8 +184,15 @@ const PokedexSearchStyle = StyleSheet.create({
     margin: 10,
     padding: 15,
     borderRadius: 10,
+    backgroundColor: appColours.pokedexGray,
     justifyContent: "center", // Vertical
     // alignItems: "center", // Horizontal
+  },
+  allSelectorButton: {
+    backgroundColor: "forestgreen",
+  },
+  transparent: {
+    backgroundColor: "transparent",
   },
   additionalDataButtonText: {
     color: "white",

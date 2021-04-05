@@ -13,17 +13,17 @@ const determineBackgroundColourByType = (type) => {
   return typeColourIndex.Default;
 };
 
-export const Pokemon = ({ id, name, imageSource, types }) => {
+export const Pokemon = ({ id, name, imageSource, type }) => {
   return (
-    <View style={[styles.pokemonContainer, { backgroundColor: determineBackgroundColourByType(types[0]) }]}>
+    <View style={[styles.pokemonContainer, { backgroundColor: determineBackgroundColourByType(type[0]) }]}>
       <Image source={containerBackground} style={styles.containerBackgroundImage} />
       <View style={styles.pokemonDataContainer}>
         <Text style={styles.name}>{name}</Text>
         <Text style={styles.id}>#{id}</Text>
         <View style={styles.type}>
-          {types.map((type) => (
+          {type.map((aType) => (
             <Text style={styles.typeText} key={typeKey++}>
-              {type}
+              {aType}
             </Text>
           ))}
         </View>

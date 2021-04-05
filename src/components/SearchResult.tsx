@@ -15,7 +15,7 @@ export const SearchResult = (props) => {
       <FlatList
         data={localPokemonData}
         renderItem={({ item }) => (
-          <Pokemon id={item.id} name={item.name} imageSource={item.imageSource} types={item.types} />
+          <Pokemon id={item.id} name={item.name} imageSource={item.imageSource} type={item.type} />
         )}
         numColumns={2}
         keyExtractor={(item) => item.id}

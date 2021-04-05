@@ -37,7 +37,7 @@ Pokemon.propTypes = {
   id: PropTypes.number,
   name: PropTypes.string,
   imageSource: PropTypes.string,
-  types: PropTypes.array,
+  type: PropTypes.array,
 };
 
 const pokemonContainerWidth: number = Dimensions.get("window").width / 2 - 15;

@@ -1,5 +1,11 @@
 export const localPokemonData = [
   {
+    id: 25,
+    name: "Pikachu",
+    imageSource: "http://assets.stickpng.com/images/580b57fcd9996e24bc43c325.png",
+    types: ["Electric"],
+  },
+  {
     id: 1,
     name: "Bulbasaur",
     imageSource: "https://i.pinimg.com/originals/3b/78/47/3b7847675982776e5219e12a680ecd84.png",
@@ -17,12 +23,6 @@ export const localPokemonData = [
     name: "Squirtle",
     imageSource: "http://assets.stickpng.com/images/580b57fcd9996e24bc43c32a.png",
     types: ["Water"],
-  },
-  {
-    id: 25,
-    name: "Pikachu",
-    imageSource: "http://assets.stickpng.com/images/580b57fcd9996e24bc43c325.png",
-    types: ["Electric"],
   },
   {
     id: 152,
@@ -82,6 +82,42 @@ export const localPokemonData = [
     types: ["Water"],
   },
   {
+    id: 495,
+    name: "Snivy",
+    imageSource: "https://cdn.bulbagarden.net/upload/thumb/7/75/495Snivy.png/1200px-495Snivy.png",
+    types: ["Grass"],
+  },
+  {
+    id: 498,
+    name: "Tepig",
+    imageSource: "https://cdn.bulbagarden.net/upload/thumb/5/5b/498Tepig.png/1200px-498Tepig.png",
+    types: ["Fire"],
+  },
+  {
+    id: 501,
+    name: "Oshawott",
+    imageSource: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/501.png",
+    types: ["Water"],
+  },
+  {
+    id: 650,
+    name: "Chespin",
+    imageSource: "https://cdn.bulbagarden.net/upload/thumb/c/ca/650Chespin.png/1200px-650Chespin.png",
+    types: ["Grass"],
+  },
+  {
+    id: 653,
+    name: "Fennekin",
+    imageSource: "https://cdn.bulbagarden.net/upload/thumb/3/3d/653Fennekin.png/1200px-653Fennekin.png",
+    types: ["Fire"],
+  },
+  {
+    id: 656,
+    name: "Froakie",
+    imageSource: "https://cdn.bulbagarden.net/upload/thumb/1/18/656Froakie.png/250px-656Froakie.png",
+    types: ["Water"],
+  },
+  {
     id: 722,
     name: "Rowlet",
     imageSource: "https://pokestop.io/img/pokemon/rowlet-256x256.png",
@@ -98,6 +134,24 @@ export const localPokemonData = [
     name: "Popplio",
     imageSource:
       "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/695f7949-df76-4452-bdf0-130afea52f21/dbfbgvl-a023ac79-790c-48f6-adcf-71b17a8699a9.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvNjk1Zjc5NDktZGY3Ni00NDUyLWJkZjAtMTMwYWZlYTUyZjIxXC9kYmZiZ3ZsLWEwMjNhYzc5LTc5MGMtNDhmNi1hZGNmLTcxYjE3YTg2OTlhOS5wbmcifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6ZmlsZS5kb3dubG9hZCJdfQ.hOnmF84l9zbae9j7rySzkpRRtm_3CEPWMzrHO1hSKig",
+    types: ["Water"],
+  },
+  {
+    id: 810,
+    name: "Grookey",
+    imageSource: "https://cdn.bulbagarden.net/upload/thumb/9/93/810Grookey.png/1200px-810Grookey.png",
+    types: ["Grass"],
+  },
+  {
+    id: 813,
+    name: "Scorbunny",
+    imageSource: "https://cdn.bulbagarden.net/upload/thumb/0/06/813Scorbunny.png/250px-813Scorbunny.png",
+    types: ["Fire"],
+  },
+  {
+    id: 816,
+    name: "Sobbie",
+    imageSource: "https://cdn.bulbagarden.net/upload/thumb/9/9b/816Sobble.png/1200px-816Sobble.png",
     types: ["Water"],
   },
 ];

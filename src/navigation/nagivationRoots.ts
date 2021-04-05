@@ -12,7 +12,7 @@ const mainRoot = {
       children: [
         {
           component: {
-            name: "Home",
+            name: "Search",
           },
         },
       ],

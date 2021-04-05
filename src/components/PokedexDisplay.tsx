@@ -2,7 +2,7 @@ import { Image, StyleSheet, View } from "react-native";
 import React from "react";
 import { appColours } from "../styles/colours";
 
-const displayImage = require("../assets/images/pikachuInnerScreen.png");
+const displayImage = require("../assets/images/profressOakInnerScreen.png");
 const hamburgerIcon = require("../assets/images/hamburgerIcon.png");
 
 export const PokedexDisplay = () => {
@@ -87,7 +87,7 @@ const PokedexInnerScreenStyle = StyleSheet.create({
   },
   displayImage: {
     resizeMode: "contain",
-    height: "100%",
+    height: "99%",
     width: "100%",
   },
   miniLedTop: {

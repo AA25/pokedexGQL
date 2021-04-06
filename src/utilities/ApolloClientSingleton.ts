@@ -1,4 +1,5 @@
 import { ApolloClient, ApolloClientOptions, InMemoryCache } from "@apollo/client";
+import { appConfig } from "./config";
 
 /**
  *
@@ -16,7 +17,7 @@ export class ApolloClientSingleton {
   private static instance: ApolloClient<any>;
 
   private static clientOptions: ApolloClientOptions<any> = {
-    uri: "HIDDEN-URL",
+    uri: appConfig.API_URL,
     cache: new InMemoryCache(),
   };
 

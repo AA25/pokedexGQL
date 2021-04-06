@@ -1,9 +1,4 @@
-import { ApolloClient, InMemoryCache } from "@apollo/client";
-
-interface IClientOptions {
-  uri: String;
-  cache: InMemoryCache;
-}
+import { ApolloClient, ApolloClientOptions, InMemoryCache } from "@apollo/client";
 
 /**
  *
@@ -20,7 +15,7 @@ interface IClientOptions {
 export class ApolloClientSingleton {
   private static instance: ApolloClient<any>;
 
-  private static clientOptions: IClientOptions = {
+  private static clientOptions: ApolloClientOptions<any> = {
     uri: "HIDDEN-URL",
     cache: new InMemoryCache(),
   };

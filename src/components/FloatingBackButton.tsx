@@ -26,6 +26,6 @@ export const FloatingBackButton = ({ componentId, navigationComponent }) => {
 };
 
 FloatingBackButton.propTypes = {
-  componentId: PropTypes.number,
+  componentId: PropTypes.string,
   navigationComponent: PropTypes.string,
 };

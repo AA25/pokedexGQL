@@ -1,14 +1,51 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { FlatList, SafeAreaView, StyleSheet, View, Image, Pressable } from "react-native";
-import { localPokemonData } from "../utilities/localPokemonData";
-import { Navigation } from "react-native-navigation";
-import { appStyles } from "../styles/styles";
+import { FlatList, SafeAreaView, StyleSheet, View } from "react-native";
 import { Pokemon } from "./Pokemon";
+import { gql } from "@apollo/client/core";
+import { useQuery } from "@apollo/client";
+import { Loading } from "./Loading";
+import { Error } from "./Error";
+import { FloatingBackButton } from "./FloatingBackButton";
+import { localPokemonData } from "../utilities/localPokemonData";
 
-const backIcon = require("../assets/images/back.png");
+const pokemonQuery = gql`
+  query {
+    pokemons {
+      id
+      name
+      imageSource
+      type
+    }
+  }
+`;
 
 export const SearchResult = (props) => {
+  const { data, loading, error } = useQuery(pokemonQuery);
+
+  if (loading) {
+    return (
+      <View style={styles.container}>
+        <Loading />
+        <FloatingBackButton componentId={props.componentId} navigationComponent={"Search"} />
+      </View>
+    );
+  }
+
+  if (error) {
+    return (
+      <View style={styles.container}>
+        <Error />
+        <FloatingBackButton componentId={props.componentId} navigationComponent={"Search"} />
+      </View>
+    );
+  }
+
+  console.log("AOA");
+  const pokemonData = data.pokemons;
+  console.log(pokemonData);
+  // TODO: transform layer here via destructuring
+
   return (
     <SafeAreaView style={styles.container}>
       {/* List of Pokemon */}
@@ -22,20 +59,7 @@ export const SearchResult = (props) => {
       />
 
       {/* Back Button */}
-      <View style={appStyles.floatingCornerButtonContainer}>
-        <Pressable
-          onPress={() =>
-            Navigation.push(props.componentId, {
-              component: {
-                name: "Search",
-              },
-            })
-          }
-          style={[appStyles.floatingCornerButton, appStyles.buttonShadow]}
-        >
-          <Image source={backIcon} style={appStyles.floatingCornerButtonImg} />
-        </Pressable>
-      </View>
+      <FloatingBackButton componentId={props.componentId} navigationComponent={"Search"} />
     </SafeAreaView>
   );
 };

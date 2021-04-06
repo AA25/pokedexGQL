@@ -8,6 +8,7 @@ import { Loading } from "./Loading";
 import { Error } from "./Error";
 import { FloatingBackButton } from "./FloatingBackButton";
 import { localPokemonData } from "../utilities/localPokemonData";
+import { appConfig } from "../utilities/config";
 
 const pokemonQuery = gql`
   query {
@@ -20,7 +21,35 @@ const pokemonQuery = gql`
   }
 `;
 
+const ResultList = ({ componentId, pokemonData }) => {
+  return (
+    <SafeAreaView style={styles.container}>
+      {/* List of Pokemon */}
+      <FlatList
+        data={pokemonData}
+        renderItem={({ item }) => (
+          <Pokemon id={item.id} name={item.name} imageSource={item.imageSource} type={item.type} />
+        )}
+        numColumns={2}
+        keyExtractor={(item) => item.id}
+      />
+
+      {/* Back Button */}
+      <FloatingBackButton componentId={componentId} navigationComponent={"Search"} />
+    </SafeAreaView>
+  );
+};
+
 export const SearchResult = (props) => {
+  // Initially set to use local data unless stated otherwise in config
+  let pokemonData = localPokemonData;
+
+  if (appConfig.USE_LOCAL_DATA && appConfig.API_URL !== "") {
+    // Using real data
+    return <ResultList componentId={props.componentId} pokemonData={pokemonData} />;
+  }
+
+  // Using real data
   const { data, loading, error } = useQuery(pokemonQuery);
 
   if (loading) {
@@ -41,27 +70,10 @@ export const SearchResult = (props) => {
     );
   }
 
-  console.log("AOA");
-  const pokemonData = data.pokemons;
-  console.log(pokemonData);
-  // TODO: transform layer here via destructuring
+  // TODO: transform layer here
+  pokemonData = data.pokemons;
 
-  return (
-    <SafeAreaView style={styles.container}>
-      {/* List of Pokemon */}
-      <FlatList
-        data={localPokemonData}
-        renderItem={({ item }) => (
-          <Pokemon id={item.id} name={item.name} imageSource={item.imageSource} type={item.type} />
-        )}
-        numColumns={2}
-        keyExtractor={(item) => item.id}
-      />
-
-      {/* Back Button */}
-      <FloatingBackButton componentId={props.componentId} navigationComponent={"Search"} />
-    </SafeAreaView>
-  );
+  return <ResultList componentId={props.componentId} pokemonData={pokemonData} />;
 };
 
 SearchResult.propTypes = {

@@ -50,6 +50,7 @@ export const SearchResult = (props) => {
   }
 
   // Using real data
+  // eslint-disable-next-line no-console
   const { data, loading, error } = useQuery(pokemonQuery);
 
   if (loading) {
@@ -78,6 +79,11 @@ export const SearchResult = (props) => {
 
 SearchResult.propTypes = {
   componentId: PropTypes.string,
+};
+
+ResultList.propTypes = {
+  componentId: PropTypes.string,
+  pokemonData: PropTypes.array,
 };
 
 const styles = StyleSheet.create({

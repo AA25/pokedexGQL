@@ -1,7 +1,7 @@
 ## PokedexGQL
 - This project is a mobile application created using React Native, where users can query pokemon data from
 a limited sample. This data *will be* retured from a GraphQL API server (another project of mine, https://github.com/AA25/GraphQL-API).
-Technologies/Libraries used were React Native, React Native Navigation, ApolloGraphql client, React Native Debugger 
+Technologies/Libraries used were React Native, React Native Navigation, ApolloGraphql client, React Native Debugger and React Native AsyncStorage
 
 ## Cloning and running project for the first time (Only for Android for now)
 - React Native

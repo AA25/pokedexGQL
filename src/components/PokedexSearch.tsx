@@ -4,6 +4,7 @@ import { appColours } from "../styles/colours";
 import { appStyles } from "../styles/styles";
 import { Navigation } from "react-native-navigation";
 import PropTypes from "prop-types";
+import {AdditionalFieldFrontEnd, IAdditionalData, storeAdditionalFields} from "../utilities/AdditionalFieldHelper";
 
 const pokeballImage = require("../assets/images/pokeBallAlt.png");
 const searchIcon = require("../assets/images/search.png");
@@ -39,6 +40,23 @@ export const PokedexSearch = (props) => {
     }
   };
 
+  // Store additional data and navigate to Results page
+  const initiateButtonPressLogic = async () => {
+    const additionalDataOptions: IAdditionalData = {
+      A: additionalDataA,
+      B: additionalDataB,
+      C: additionalDataC,
+      D: additionalDataD,
+    };
+    await storeAdditionalFields(additionalDataOptions);
+
+    await Navigation.push(props.componentId, {
+      component: {
+        name: "Results",
+      },
+    });
+  };
+
   return (
     <View style={PokedexSearchStyle.container}>
       {/* Info text */}
@@ -63,7 +81,7 @@ export const PokedexSearch = (props) => {
               additionalDataA ? PokedexSearchStyle.buttonImgActive : PokedexSearchStyle.buttonImgInactive,
             ]}
           />
-          <Text style={PokedexSearchStyle.additionalDataButtonText}>PLACEHOLDER</Text>
+          <Text style={PokedexSearchStyle.additionalDataButtonText}>{AdditionalFieldFrontEnd.A}</Text>
         </Pressable>
         <Pressable
           onPress={() => {
@@ -78,7 +96,7 @@ export const PokedexSearch = (props) => {
               additionalDataB ? PokedexSearchStyle.buttonImgActive : PokedexSearchStyle.buttonImgInactive,
             ]}
           />
-          <Text style={PokedexSearchStyle.additionalDataButtonText}>PLACEHOLDER</Text>
+          <Text style={PokedexSearchStyle.additionalDataButtonText}>{AdditionalFieldFrontEnd.B}</Text>
         </Pressable>
       </View>
 
@@ -96,7 +114,7 @@ export const PokedexSearch = (props) => {
               additionalDataC ? PokedexSearchStyle.buttonImgActive : PokedexSearchStyle.buttonImgInactive,
             ]}
           />
-          <Text style={PokedexSearchStyle.additionalDataButtonText}>PLACEHOLDER</Text>
+          <Text style={PokedexSearchStyle.additionalDataButtonText}>{AdditionalFieldFrontEnd.C}</Text>
         </Pressable>
         <Pressable
           onPress={() => {
@@ -111,7 +129,7 @@ export const PokedexSearch = (props) => {
               additionalDataD ? PokedexSearchStyle.buttonImgActive : PokedexSearchStyle.buttonImgInactive,
             ]}
           />
-          <Text style={PokedexSearchStyle.additionalDataButtonText}>PLACEHOLDER</Text>
+          <Text style={PokedexSearchStyle.additionalDataButtonText}>{AdditionalFieldFrontEnd.D}</Text>
         </Pressable>
       </View>
 
@@ -126,7 +144,7 @@ export const PokedexSearch = (props) => {
             appStyles.buttonShadow,
           ]}
         >
-          <Text style={PokedexSearchStyle.additionalDataButtonText}>
+          <Text style={[PokedexSearchStyle.additionalDataButtonText, [PokedexSearchStyle.centerText]]}>
             {additionalDataAll ? "DESELECT ALL" : "SELECT ALL"}
           </Text>
         </Pressable>
@@ -135,16 +153,7 @@ export const PokedexSearch = (props) => {
 
       {/* Search Button */}
       <View style={appStyles.floatingCornerButtonContainer}>
-        <Pressable
-          onPress={() =>
-            Navigation.push(props.componentId, {
-              component: {
-                name: "Results",
-              },
-            })
-          }
-          style={[appStyles.floatingCornerButton, appStyles.buttonShadow]}
-        >
+        <Pressable onPress={initiateButtonPressLogic} style={[appStyles.floatingCornerButton, appStyles.buttonShadow]}>
           <Image source={searchIcon} style={appStyles.floatingCornerButtonImg} />
         </Pressable>
       </View>
@@ -198,6 +207,9 @@ const PokedexSearchStyle = StyleSheet.create({
     color: "white",
     fontSize: 16,
     fontFamily: "WHITRABT",
+  },
+  centerText: {
+    textAlign: "center",
   },
   buttonImg: {
     position: "absolute",

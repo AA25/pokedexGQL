@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { StyleSheet, View } from "react-native";
 import { appColours } from "../styles/colours";
 import { PokedexHeader } from "../components/PokedexHeader";
-import { PokemonResult } from "../components/PokemonResult";
+import { PokemonResult } from "../components/Results/PokemonResult";
 import { ApolloProvider } from "@apollo/client";
 import { ApolloClientSingleton } from "../utilities/ApolloClientSingleton";
 

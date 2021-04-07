@@ -1,13 +1,13 @@
 import { Image, Pressable, StyleSheet, Text, View } from "react-native";
 import React, { useState } from "react";
-import { appColours } from "../styles/colours";
-import { appStyles } from "../styles/styles";
+import { appColours } from "../../styles/colours";
+import { appStyles } from "../../styles/styles";
 import { Navigation } from "react-native-navigation";
 import PropTypes from "prop-types";
-import { AdditionalFieldFrontEnd, IAdditionalData, storeAdditionalFields } from "../utilities/AdditionalFieldHelper";
+import { AdditionalFieldFrontEnd, IAdditionalData, storeAdditionalFields } from "../../helpers/AdditionalFieldHelper";
 
-const pokeballImage = require("../assets/images/pokeBallAlt.png");
-const searchIcon = require("../assets/images/search.png");
+const pokeballImage = require("../../assets/images/pokeBallAlt.png");
+const searchIcon = require("../../assets/images/search.png");
 
 export const PokedexSearch = (props) => {
   const [additionalDataA, pressedAdditionalDataA] = useState(false);

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import { Loading } from "./Loading";
-import { getAdditionalFieldsRequired } from "../utilities/AdditionalFieldHelper";
+import { Loading } from "../Loading";
+import { getAdditionalFieldsRequired } from "../../helpers/AdditionalFieldHelper";
 import { PokemonListViaGraphQL } from "./GraphqlPokemonData";
 
 export const PokemonResult = ({ componentId }) => {

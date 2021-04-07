@@ -1,9 +1,9 @@
 import { Dimensions, Image, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import PropTypes from "prop-types";
-import { typeColourIndex } from "../styles/colours";
+import { typeColourIndex } from "../../styles/colours";
 
-const containerBackground = require("../assets/images/pokemonContainerBackground.png");
+const containerBackground = require("../../assets/images/pokemonContainerBackground.png");
 let typeKey = 1;
 
 const determineBackgroundColourByType = (type: String) => {

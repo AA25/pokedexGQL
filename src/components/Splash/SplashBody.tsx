@@ -1,11 +1,11 @@
 import { Image, Pressable, StyleSheet, Text, View } from "react-native";
 import { Navigation } from "react-native-navigation";
-import { mainRoot } from "../navigation/nagivationRoots";
+import { mainRoot } from "../../navigation/nagivationRoots";
 import React from "react";
-import { appColours } from "../styles/colours";
-import { appStyles } from "../styles/styles";
+import { appColours } from "../../styles/colours";
+import { appStyles } from "../../styles/styles";
 
-const splashImage = require("../assets/images/PokemonGqlSplashAlt.png");
+const splashImage = require("../../assets/images/PokemonGqlSplashAlt.png");
 
 export const SplashBody = () => {
   return (

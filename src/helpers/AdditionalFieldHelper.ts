@@ -1,4 +1,4 @@
-import { getObjectValue, storeObjectValue } from "./DataStore";
+import { getObjectValue, storeObjectValue } from "../utilities/DataStore";
 
 export interface IAdditionalData {
   A: Boolean;

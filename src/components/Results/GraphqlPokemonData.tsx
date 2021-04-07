@@ -1,9 +1,9 @@
 import { useQuery } from "@apollo/client";
 import { gql } from "@apollo/client/core";
 import { FlatList, SafeAreaView, StyleSheet, View } from "react-native";
-import { Loading } from "./Loading";
-import { FloatingBackButton } from "./FloatingBackButton";
-import { Error } from "./Error";
+import { Loading } from "../Loading";
+import { FloatingBackButton } from "../FloatingBackButton";
+import { Error } from "../Error";
 import React from "react";
 import { Pokemon } from "./Pokemon";
 import PropTypes from "prop-types";

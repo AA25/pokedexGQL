@@ -76,10 +76,7 @@ export const PokedexSearch = (props) => {
         >
           <Image
             source={pokeballImage}
-            style={[
-              style.buttonImg,
-              additionalDataA ? style.buttonImgActive : style.buttonImgInactive,
-            ]}
+            style={[style.buttonImg, additionalDataA ? style.buttonImgActive : style.buttonImgInactive]}
           />
           <Text style={style.additionalDataButtonText}>{AdditionalFieldFrontEnd.A}</Text>
         </Pressable>
@@ -91,10 +88,7 @@ export const PokedexSearch = (props) => {
         >
           <Image
             source={pokeballImage}
-            style={[
-              style.buttonImg,
-              additionalDataB ? style.buttonImgActive : style.buttonImgInactive,
-            ]}
+            style={[style.buttonImg, additionalDataB ? style.buttonImgActive : style.buttonImgInactive]}
           />
           <Text style={style.additionalDataButtonText}>{AdditionalFieldFrontEnd.B}</Text>
         </Pressable>
@@ -109,10 +103,7 @@ export const PokedexSearch = (props) => {
         >
           <Image
             source={pokeballImage}
-            style={[
-              style.buttonImg,
-              additionalDataC ? style.buttonImgActive : style.buttonImgInactive,
-            ]}
+            style={[style.buttonImg, additionalDataC ? style.buttonImgActive : style.buttonImgInactive]}
           />
           <Text style={style.additionalDataButtonText}>{AdditionalFieldFrontEnd.C}</Text>
         </Pressable>
@@ -124,10 +115,7 @@ export const PokedexSearch = (props) => {
         >
           <Image
             source={pokeballImage}
-            style={[
-              style.buttonImg,
-              additionalDataD ? style.buttonImgActive : style.buttonImgInactive,
-            ]}
+            style={[style.buttonImg, additionalDataD ? style.buttonImgActive : style.buttonImgInactive]}
           />
           <Text style={style.additionalDataButtonText}>{AdditionalFieldFrontEnd.D}</Text>
         </Pressable>
@@ -138,11 +126,7 @@ export const PokedexSearch = (props) => {
           onPress={() => {
             changeButtonActivity("additionalDataAll");
           }}
-          style={[
-            style.additionalDataButton,
-            style.allSelectorButton,
-            appStyles.buttonShadow,
-          ]}
+          style={[style.additionalDataButton, style.allSelectorButton, appStyles.buttonShadow]}
         >
           <Text style={[style.additionalDataButtonText, [style.centerText]]}>
             {additionalDataAll ? "DESELECT ALL" : "SELECT ALL"}

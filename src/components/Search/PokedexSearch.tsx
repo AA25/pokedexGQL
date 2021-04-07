@@ -58,97 +58,97 @@ export const PokedexSearch = (props) => {
   };
 
   return (
-    <View style={PokedexSearchStyle.container}>
+    <View style={style.container}>
       {/* Info text */}
-      <View style={PokedexSearchStyle.additionalDataTextContainer}>
-        <Text style={PokedexSearchStyle.additionalDataText}>
+      <View style={style.additionalDataTextContainer}>
+        <Text style={style.additionalDataText}>
           Select the additional pieces of data you would like returned with each Pokemon
         </Text>
       </View>
 
       {/* Rows of buttons to add additional data to query */}
-      <View style={PokedexSearchStyle.flexDirectionRow}>
+      <View style={style.flexDirectionRow}>
         <Pressable
           onPress={() => {
             changeButtonActivity("additionalDataA");
           }}
-          style={[PokedexSearchStyle.additionalDataButton, appStyles.buttonShadow]}
+          style={[style.additionalDataButton, appStyles.buttonShadow]}
         >
           <Image
             source={pokeballImage}
             style={[
-              PokedexSearchStyle.buttonImg,
-              additionalDataA ? PokedexSearchStyle.buttonImgActive : PokedexSearchStyle.buttonImgInactive,
+              style.buttonImg,
+              additionalDataA ? style.buttonImgActive : style.buttonImgInactive,
             ]}
           />
-          <Text style={PokedexSearchStyle.additionalDataButtonText}>{AdditionalFieldFrontEnd.A}</Text>
+          <Text style={style.additionalDataButtonText}>{AdditionalFieldFrontEnd.A}</Text>
         </Pressable>
         <Pressable
           onPress={() => {
             changeButtonActivity("additionalDataB");
           }}
-          style={[PokedexSearchStyle.additionalDataButton, appStyles.buttonShadow]}
+          style={[style.additionalDataButton, appStyles.buttonShadow]}
         >
           <Image
             source={pokeballImage}
             style={[
-              PokedexSearchStyle.buttonImg,
-              additionalDataB ? PokedexSearchStyle.buttonImgActive : PokedexSearchStyle.buttonImgInactive,
+              style.buttonImg,
+              additionalDataB ? style.buttonImgActive : style.buttonImgInactive,
             ]}
           />
-          <Text style={PokedexSearchStyle.additionalDataButtonText}>{AdditionalFieldFrontEnd.B}</Text>
+          <Text style={style.additionalDataButtonText}>{AdditionalFieldFrontEnd.B}</Text>
         </Pressable>
       </View>
 
-      <View style={PokedexSearchStyle.flexDirectionRow}>
+      <View style={style.flexDirectionRow}>
         <Pressable
           onPress={() => {
             changeButtonActivity("additionalDataC");
           }}
-          style={[PokedexSearchStyle.additionalDataButton, appStyles.buttonShadow]}
+          style={[style.additionalDataButton, appStyles.buttonShadow]}
         >
           <Image
             source={pokeballImage}
             style={[
-              PokedexSearchStyle.buttonImg,
-              additionalDataC ? PokedexSearchStyle.buttonImgActive : PokedexSearchStyle.buttonImgInactive,
+              style.buttonImg,
+              additionalDataC ? style.buttonImgActive : style.buttonImgInactive,
             ]}
           />
-          <Text style={PokedexSearchStyle.additionalDataButtonText}>{AdditionalFieldFrontEnd.C}</Text>
+          <Text style={style.additionalDataButtonText}>{AdditionalFieldFrontEnd.C}</Text>
         </Pressable>
         <Pressable
           onPress={() => {
             changeButtonActivity("additionalDataD");
           }}
-          style={[PokedexSearchStyle.additionalDataButton, appStyles.buttonShadow]}
+          style={[style.additionalDataButton, appStyles.buttonShadow]}
         >
           <Image
             source={pokeballImage}
             style={[
-              PokedexSearchStyle.buttonImg,
-              additionalDataD ? PokedexSearchStyle.buttonImgActive : PokedexSearchStyle.buttonImgInactive,
+              style.buttonImg,
+              additionalDataD ? style.buttonImgActive : style.buttonImgInactive,
             ]}
           />
-          <Text style={PokedexSearchStyle.additionalDataButtonText}>{AdditionalFieldFrontEnd.D}</Text>
+          <Text style={style.additionalDataButtonText}>{AdditionalFieldFrontEnd.D}</Text>
         </Pressable>
       </View>
 
-      <View style={PokedexSearchStyle.flexDirectionRow}>
+      <View style={style.flexDirectionRow}>
         <Pressable
           onPress={() => {
             changeButtonActivity("additionalDataAll");
           }}
           style={[
-            PokedexSearchStyle.additionalDataButton,
-            PokedexSearchStyle.allSelectorButton,
+            style.additionalDataButton,
+            style.allSelectorButton,
             appStyles.buttonShadow,
           ]}
         >
-          <Text style={[PokedexSearchStyle.additionalDataButtonText, [PokedexSearchStyle.centerText]]}>
+          <Text style={[style.additionalDataButtonText, [style.centerText]]}>
             {additionalDataAll ? "DESELECT ALL" : "SELECT ALL"}
           </Text>
         </Pressable>
-        <View style={[PokedexSearchStyle.additionalDataButton, PokedexSearchStyle.transparent]} />
+        <View style={[style.additionalDataButton, style.transparent]} />
       </View>
 
       {/* Search Button */}
@@ -165,7 +165,7 @@ PokedexSearch.propTypes = {
   componentId: PropTypes.string,
 };
 
-const PokedexSearchStyle = StyleSheet.create({
+const style = StyleSheet.create({
   flexDirectionRow: {
     flexDirection: "row",
   },

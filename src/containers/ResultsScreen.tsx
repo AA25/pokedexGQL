@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { StyleSheet, View } from "react-native";
 import { appColours } from "../styles/colours";
 import { PokedexHeader } from "../components/PokedexHeader";
-import { SearchResult } from "../components/SearchResult";
+import { PokemonResult } from "../components/PokemonResult";
 import { ApolloProvider } from "@apollo/client";
 import { ApolloClientSingleton } from "../utilities/ApolloClientSingleton";
 
@@ -14,7 +14,7 @@ export const ResultsScreen = (props) => {
     <ApolloProvider client={client}>
       <View style={resultScreenStyle.screenContainer}>
         <PokedexHeader />
-        <SearchResult componentId={props.componentId} />
+        <PokemonResult componentId={props.componentId} />
       </View>
     </ApolloProvider>
   );

@@ -1,10 +1,10 @@
 import { getObjectValue, storeObjectValue } from "./DataStore";
 
 export interface IAdditionalData {
-  A: Boolean,
-  B: Boolean,
-  C: Boolean,
-  D: Boolean,
+  A: Boolean;
+  B: Boolean;
+  C: Boolean;
+  D: Boolean;
 }
 
 export enum AdditionalFieldFrontEnd {

@@ -4,7 +4,7 @@ import { appColours } from "../styles/colours";
 import { appStyles } from "../styles/styles";
 import { Navigation } from "react-native-navigation";
 import PropTypes from "prop-types";
-import {AdditionalFieldFrontEnd, IAdditionalData, storeAdditionalFields} from "../utilities/AdditionalFieldHelper";
+import { AdditionalFieldFrontEnd, IAdditionalData, storeAdditionalFields } from "../utilities/AdditionalFieldHelper";
 
 const pokeballImage = require("../assets/images/pokeBallAlt.png");
 const searchIcon = require("../assets/images/search.png");

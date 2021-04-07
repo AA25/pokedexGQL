@@ -9,7 +9,7 @@ import { Pokemon } from "./Pokemon";
 import PropTypes from "prop-types";
 
 export const PokemonListViaGraphQL = ({ componentId, allFields }) => {
-    const { data, loading, error } = useQuery(gql`
+  const { data, loading, error } = useQuery(gql`
     query {
       pokemons {
         ${allFields}
@@ -17,33 +17,33 @@ export const PokemonListViaGraphQL = ({ componentId, allFields }) => {
     }
   `);
 
-    if (loading) {
-        return (
-            <View style={styles.container}>
-                <Loading />
-                <FloatingBackButton componentId={componentId} navigationComponent={"Search"} />
-            </View>
-        );
-    }
+  if (loading) {
+    return (
+      <View style={styles.container}>
+        <Loading />
+        <FloatingBackButton componentId={componentId} navigationComponent={"Search"} />
+      </View>
+    );
+  }
 
-    if (error) {
-        return (
-            <View style={styles.container}>
-                <Error />
-                <FloatingBackButton componentId={componentId} navigationComponent={"Search"} />
-            </View>
-        );
-    }
+  if (error) {
+    return (
+      <View style={styles.container}>
+        <Error />
+        <FloatingBackButton componentId={componentId} navigationComponent={"Search"} />
+      </View>
+    );
+  }
 
-    // TODO: transform layer here
-    const pokemonData = data.pokemons;
+  // TODO: transform layer here
+  const pokemonData = data.pokemons;
 
-    return <PokemonList componentId={componentId} pokemonData={pokemonData} />;
+  return <PokemonList componentId={componentId} pokemonData={pokemonData} />;
 };
 
 PokemonListViaGraphQL.propTypes = {
-    componentId: PropTypes.string,
-    allFields: PropTypes.string,
+  componentId: PropTypes.string,
+  allFields: PropTypes.string,
 };
 
 export const PokemonList = ({ componentId, pokemonData }) => {

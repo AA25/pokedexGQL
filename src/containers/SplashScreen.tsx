@@ -1,7 +1,7 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
 import { PokedexHeader } from "../components/PokedexHeader";
-import { SplashBody } from "../components/SplashBody";
+import { SplashBody } from "../components/Splash/SplashBody";
 import { PokedexFooter } from "../components/pokdedexFooter";
 import { appColours } from "../styles/colours";
 

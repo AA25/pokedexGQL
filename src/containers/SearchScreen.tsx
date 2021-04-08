@@ -3,8 +3,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import { appColours } from "../styles/colours";
 import { PokedexHeader } from "../components/PokedexHeader";
-import { PokedexDisplay } from "../components/PokedexDisplay";
-import { PokedexSearch } from "../components/PokedexSearch";
+import { PokedexDisplay } from "../components/Search/PokedexDisplay";
+import { PokedexSearch } from "../components/Search/PokedexSearch";
 
 export const SearchScreen = (props) => {
   return (

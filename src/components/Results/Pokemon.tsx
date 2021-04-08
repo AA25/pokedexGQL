@@ -1,16 +1,18 @@
 import { Dimensions, Image, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import PropTypes from "prop-types";
-import { typeColourIndex } from "../styles/colours";
+import { typeColourIndex } from "../../styles/colours";
 
-const containerBackground = require("../assets/images/pokemonContainerBackground.png");
+const containerBackground = require("../../assets/images/pokemonContainerBackground.png");
 let typeKey = 1;
 
-const determineBackgroundColourByType = (type) => {
-  if (typeColourIndex[type]) {
-    return typeColourIndex[type];
+const determineBackgroundColourByType = (type: String) => {
+  const findType = type.toLowerCase();
+
+  if (typeColourIndex[findType]) {
+    return typeColourIndex[findType];
   }
-  return typeColourIndex.Default;
+  return typeColourIndex.default;
 };
 
 export const Pokemon = ({ id, name, imageSource, type }) => {
@@ -23,7 +25,7 @@ export const Pokemon = ({ id, name, imageSource, type }) => {
         <View style={styles.type}>
           {type.map((aType) => (
             <Text style={styles.typeText} key={typeKey++}>
-              {aType}
+              {aType.charAt(0).toUpperCase() + aType.slice(1).toLowerCase()}
             </Text>
           ))}
         </View>
@@ -37,7 +39,7 @@ Pokemon.propTypes = {
   id: PropTypes.number,
   name: PropTypes.string,
   imageSource: PropTypes.string,
-  types: PropTypes.array,
+  type: PropTypes.array,
 };
 
 const pokemonContainerWidth: number = Dimensions.get("window").width / 2 - 15;

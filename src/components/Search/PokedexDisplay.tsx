@@ -1,9 +1,9 @@
 import { Image, StyleSheet, View } from "react-native";
 import React from "react";
-import { appColours } from "../styles/colours";
+import { appColours } from "../../styles/colours";
 
-const displayImage = require("../assets/images/profressOakInnerScreen.png");
-const hamburgerIcon = require("../assets/images/hamburgerIcon.png");
+const displayImage = require("../../assets/images/profressOakInnerScreen.png");
+const hamburgerIcon = require("../../assets/images/hamburgerIcon.png");
 
 export const PokedexDisplay = () => {
   return (

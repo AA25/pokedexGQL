@@ -19,8 +19,6 @@ const pokedexBottom = StyleSheet.create({
     height: 15,
     width: 150,
     backgroundColor: appColours.pokedexRedOffset,
-    borderWidth: StyleSheet.hairlineWidth,
-    borderColor: "black",
     borderRadius: 20,
   },
 });

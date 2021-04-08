@@ -4,51 +4,51 @@ import { appColours } from "../../styles/colours";
 import { appStyles } from "../../styles/styles";
 import { Navigation } from "react-native-navigation";
 import PropTypes from "prop-types";
-import { AdditionalFieldFrontEnd, IAdditionalData, storeAdditionalFields } from "../../helpers/AdditionalFieldHelper";
+import { AdditionalFieldsFrontEnd, IAdditionalFields, storeAdditionalFields } from "../../helpers/AdditionalFieldHelper";
 
 const pokeballImage = require("../../assets/images/pokeBallAlt.png");
 const searchIcon = require("../../assets/images/search.png");
 
 export const PokedexSearch = (props) => {
-  const [additionalDataA, pressedAdditionalDataA] = useState(false);
-  const [additionalDataB, pressedAdditionalDataB] = useState(false);
-  const [additionalDataC, pressedAdditionalDataC] = useState(false);
-  const [additionalDataD, pressedAdditionalDataD] = useState(false);
-  const [additionalDataAll, pressedAdditionalDataAll] = useState(false);
+  const [fieldA, pressedFieldA] = useState(false);
+  const [fieldB, pressedFieldB] = useState(false);
+  const [fieldC, pressedFieldC] = useState(false);
+  const [fieldD, pressedFieldD] = useState(false);
+  const [fieldAll, pressedFieldAll] = useState(false);
 
   const changeButtonActivity = (buttonStateString: string) => {
     switch (buttonStateString) {
-      case "additionalDataA":
-        pressedAdditionalDataA(!additionalDataA);
+      case "fieldA":
+        pressedFieldA(!fieldA);
         break;
-      case "additionalDataB":
-        pressedAdditionalDataB(!additionalDataB);
+      case "fieldB":
+        pressedFieldB(!fieldB);
         break;
-      case "additionalDataC":
-        pressedAdditionalDataC(!additionalDataC);
+      case "fieldC":
+        pressedFieldC(!fieldC);
         break;
-      case "additionalDataD":
-        pressedAdditionalDataD(!additionalDataD);
+      case "fieldD":
+        pressedFieldD(!fieldD);
         break;
-      case "additionalDataAll":
-        pressedAdditionalDataAll(!additionalDataAll);
-        pressedAdditionalDataA(!additionalDataAll);
-        pressedAdditionalDataB(!additionalDataAll);
-        pressedAdditionalDataC(!additionalDataAll);
-        pressedAdditionalDataD(!additionalDataAll);
+      case "fieldAll":
+        pressedFieldAll(!fieldAll);
+        pressedFieldA(!fieldAll);
+        pressedFieldB(!fieldAll);
+        pressedFieldC(!fieldAll);
+        pressedFieldD(!fieldAll);
         break;
     }
   };
 
   // Store additional data and navigate to Results page
   const initiateButtonPressLogic = async () => {
-    const additionalDataOptions: IAdditionalData = {
-      A: additionalDataA,
-      B: additionalDataB,
-      C: additionalDataC,
-      D: additionalDataD,
+    const fieldOptions: IAdditionalFields = {
+      A: fieldA,
+      B: fieldB,
+      C: fieldC,
+      D: fieldD,
     };
-    await storeAdditionalFields(additionalDataOptions);
+    await storeAdditionalFields(fieldOptions);
 
     await Navigation.push(props.componentId, {
       component: {
@@ -60,79 +60,82 @@ export const PokedexSearch = (props) => {
   return (
     <View style={style.container}>
       {/* Info text */}
-      <View style={style.additionalDataTextContainer}>
-        <Text style={style.additionalDataText}>
+      <View style={style.fieldTextContainer}>
+        <Text style={style.fieldText}>
           Select the additional pieces of data you would like returned with each Pokemon
         </Text>
       </View>
 
       {/* Rows of buttons to add additional data to query */}
       <View style={style.flexDirectionRow}>
+        {/* Row One */}
         <Pressable
           onPress={() => {
-            changeButtonActivity("additionalDataA");
+            changeButtonActivity("fieldA");
           }}
-          style={[style.additionalDataButton, appStyles.buttonShadow]}
+          style={[style.fieldButton, appStyles.buttonShadow]}
         >
           <Image
             source={pokeballImage}
-            style={[style.buttonImg, additionalDataA ? style.buttonImgActive : style.buttonImgInactive]}
+            style={[style.buttonImg, fieldA ? style.buttonImgActive : style.buttonImgInactive]}
           />
-          <Text style={style.additionalDataButtonText}>{AdditionalFieldFrontEnd.A}</Text>
+          <Text style={style.fieldButtonText}>{AdditionalFieldsFrontEnd.A}</Text>
         </Pressable>
+
         <Pressable
           onPress={() => {
-            changeButtonActivity("additionalDataB");
+            changeButtonActivity("fieldB");
           }}
-          style={[style.additionalDataButton, appStyles.buttonShadow]}
+          style={[style.fieldButton, appStyles.buttonShadow]}
         >
           <Image
             source={pokeballImage}
-            style={[style.buttonImg, additionalDataB ? style.buttonImgActive : style.buttonImgInactive]}
+            style={[style.buttonImg, fieldB ? style.buttonImgActive : style.buttonImgInactive]}
           />
-          <Text style={style.additionalDataButtonText}>{AdditionalFieldFrontEnd.B}</Text>
+          <Text style={style.fieldButtonText}>{AdditionalFieldsFrontEnd.B}</Text>
         </Pressable>
       </View>
 
+      {/* Row Two */}
       <View style={style.flexDirectionRow}>
         <Pressable
           onPress={() => {
-            changeButtonActivity("additionalDataC");
+            changeButtonActivity("fieldC");
           }}
-          style={[style.additionalDataButton, appStyles.buttonShadow]}
+          style={[style.fieldButton, appStyles.buttonShadow]}
         >
           <Image
             source={pokeballImage}
-            style={[style.buttonImg, additionalDataC ? style.buttonImgActive : style.buttonImgInactive]}
+            style={[style.buttonImg, fieldC ? style.buttonImgActive : style.buttonImgInactive]}
           />
-          <Text style={style.additionalDataButtonText}>{AdditionalFieldFrontEnd.C}</Text>
+          <Text style={style.fieldButtonText}>{AdditionalFieldsFrontEnd.C}</Text>
         </Pressable>
+
         <Pressable
           onPress={() => {
-            changeButtonActivity("additionalDataD");
+            changeButtonActivity("fieldD");
           }}
-          style={[style.additionalDataButton, appStyles.buttonShadow]}
+          style={[style.fieldButton, appStyles.buttonShadow]}
         >
           <Image
             source={pokeballImage}
-            style={[style.buttonImg, additionalDataD ? style.buttonImgActive : style.buttonImgInactive]}
+            style={[style.buttonImg, fieldD ? style.buttonImgActive : style.buttonImgInactive]}
           />
-          <Text style={style.additionalDataButtonText}>{AdditionalFieldFrontEnd.D}</Text>
+          <Text style={style.fieldButtonText}>{AdditionalFieldsFrontEnd.D}</Text>
         </Pressable>
       </View>
 
+      {/* Row Three */}
       <View style={style.flexDirectionRow}>
         <Pressable
           onPress={() => {
-            changeButtonActivity("additionalDataAll");
+            changeButtonActivity("fieldAll");
           }}
-          style={[style.additionalDataButton, style.allSelectorButton, appStyles.buttonShadow]}
+          style={[style.fieldButton, style.allSelectorButton, appStyles.buttonShadow]}
         >
-          <Text style={[style.additionalDataButtonText, [style.centerText]]}>
-            {additionalDataAll ? "DESELECT ALL" : "SELECT ALL"}
-          </Text>
+          <Text style={[style.fieldButtonText, [style.centerText]]}>{fieldAll ? "DESELECT ALL" : "SELECT ALL"}</Text>
         </Pressable>
-        <View style={[style.additionalDataButton, style.transparent]} />
+        <View style={[style.fieldButton, style.transparent]} />
       </View>
 
       {/* Search Button */}
@@ -160,17 +163,17 @@ const style = StyleSheet.create({
     margin: 5,
     borderRadius: 5,
   },
-  additionalDataTextContainer: {
+  fieldTextContainer: {
     marginTop: 10,
   },
-  additionalDataText: {
+  fieldText: {
     color: "white",
     fontSize: 18,
     textAlign: "center",
     fontFamily: "WHITRABT",
     lineHeight: 18,
   },
-  additionalDataButton: {
+  fieldButton: {
     flex: 1,
     width: 50,
     height: 60,
@@ -187,7 +190,7 @@ const style = StyleSheet.create({
   transparent: {
     backgroundColor: "transparent",
   },
-  additionalDataButtonText: {
+  fieldButtonText: {
     color: "white",
     fontSize: 16,
     fontFamily: "WHITRABT",

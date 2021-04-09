@@ -5,7 +5,7 @@ import { appColours } from "../styles/colours";
 import { PokedexHeader } from "../components/PokedexHeader";
 import { PokemonResult } from "../components/Results/PokemonResult";
 import { ApolloProvider } from "@apollo/client";
-import { ApolloClientSingleton } from "../utilities/ApolloClientSingleton";
+import { ApolloClientSingleton } from "../helpers/ApolloClientSingleton";
 
 const client = new ApolloClientSingleton.getInstance();
 

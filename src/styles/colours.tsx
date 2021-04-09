@@ -15,9 +15,9 @@ export const appColours: IAppColours = {
 };
 
 export const typeColourIndex = {
-  water: "darkturquoise",
+  water: "dodgerblue",
   fire: "tomato",
   grass: "seagreen",
-  electric: "gold",
+  electric: "#ffcc00",
   default: "pink",
 };

@@ -165,9 +165,10 @@ const styles = StyleSheet.create({
   typeText: {
     color: "white",
     textAlign: "center",
+    fontWeight: "bold",
     fontSize: 14,
     padding: 0.5,
-    borderWidth: 1,
+    borderWidth: 1.5,
     borderColor: "white",
     borderRadius: 10,
     width: 60,

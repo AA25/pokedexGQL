@@ -18,7 +18,7 @@ const determineBackgroundColourByType = (type: String) => {
   return typeColourIndex.default;
 };
 
-export const Pokemon = ({ id, name, imageSource, type }) => {
+export const Pokemon = ({ id, name, imageSource, type, additionalData }) => {
   const [modalVisible, setModalVisible] = useState(false);
 
   return (
@@ -30,11 +30,11 @@ export const Pokemon = ({ id, name, imageSource, type }) => {
         <Image source={containerBackground} style={styles.containerBackgroundImage} />
         <View style={styles.pokemonDataContainer}>
           <Text style={styles.name}>{name}</Text>
-          <Text style={styles.id}>#{id}</Text>
+          <Text style={styles.id}>{id}</Text>
           <View style={styles.type}>
             {type.map((aType) => (
               <Text style={styles.typeText} key={typeKey++}>
-                {aType.charAt(0).toUpperCase() + aType.slice(1).toLowerCase()}
+                {aType}
               </Text>
             ))}
           </View>
@@ -63,21 +63,16 @@ export const Pokemon = ({ id, name, imageSource, type }) => {
             <View style={modalStyle.pokemonDataContainer}>
               <View style={modalStyle.pokemonDataHeader}>
                 <Text style={modalStyle.name}>{name}</Text>
-                <Text style={modalStyle.id}>#{id}</Text>
+                <Text style={modalStyle.id}>{id}</Text>
               </View>
               <View style={modalStyle.pokemonDataBody}>
                 {type.map((aType) => (
                   <Text style={modalStyle.typeText} key={typeKeyModal++}>
-                    {aType.charAt(0).toUpperCase() + aType.slice(1).toLowerCase()}
+                    {aType}
                   </Text>
                 ))}
               </View>
-              <View style={modalStyle.pokemonExtraDataBody}>
-                <Text style={modalStyle.extraDataText}>Height: X</Text>
-                <Text style={modalStyle.extraDataText}>Weight: y</Text>
-                <Text style={modalStyle.extraDataText}>Signature Move: Volt Table</Text>
-                <Text style={modalStyle.extraDataText}>Attribute: Growth</Text>
-              </View>
+              <AdditionalData additionalData={additionalData} />
               <View style={modalStyle.pokemonDataFooter}>
                 <Pressable style={[modalStyle.buttonClose]} onPress={() => setModalVisible(!modalVisible)}>
                   <Image source={closeIcon} style={modalStyle.closeIcon} />
@@ -92,10 +87,28 @@ export const Pokemon = ({ id, name, imageSource, type }) => {
 };
 
 Pokemon.propTypes = {
-  id: PropTypes.number,
+  id: PropTypes.string,
   name: PropTypes.string,
   imageSource: PropTypes.string,
   type: PropTypes.array,
+  additionalData: PropTypes.object,
+};
+
+const AdditionalData = ({ additionalData }) => {
+  let additionalDataKey = 1;
+  const additionalDataText = [];
+  for (const [key, value] of Object.entries(additionalData)) {
+    additionalDataText.push(
+      <Text key={additionalDataKey++} style={modalStyle.extraDataText}>
+        {key}: {value}
+      </Text>,
+    );
+  }
+  return <View style={modalStyle.pokemonExtraDataBody}>{additionalDataText}</View>;
+};
+
+AdditionalData.propTypes = {
+  additionalData: PropTypes.object,
 };
 
 const pokemonContainerWidth: number = Dimensions.get("window").width / 2 - 15;
@@ -167,7 +180,7 @@ const modalStyle = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "rgba(0,0,0,0.2)",
+    backgroundColor: "rgba(0,0,0,0.4)",
   },
   modalView: {
     backgroundColor: "white",

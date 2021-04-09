@@ -4,6 +4,7 @@ a limited sample and selected additional data to be returned. This data is retur
 Technologies/Libraries used were React Native, React Native Navigation, ApolloGraphql client, React Native Debugger and React Native AsyncStorage.
 
 - The design of this Pokedex application is heavly influenced by the first Pokedex that featured in the Pokemon show while also taking design inspirations from other works.
+
 ![](https://media.giphy.com/media/BCfrqGTqQOGFzFPd9f/giphy.gif)
 
 ## Cloning and running project for the first time (Only for Android for now)

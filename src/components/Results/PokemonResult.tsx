@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { Loading } from "../Loading";
 import { getAdditionalFieldsRequired } from "../../helpers/AdditionalFieldHelper";
 import { PokemonListViaGraphQL } from "./GraphqlPokemonData";
+import { defaultPokemonFields } from "../../helpers/TransformPokemonData";
 
 export const PokemonResult = ({ componentId }) => {
   // SPECIAL CASE - Use local data to present data if not specified otherwise via Config file
@@ -14,7 +15,7 @@ export const PokemonResult = ({ componentId }) => {
   // Otherwise do steps to get live data
   // First generate a string containing all the fields wanted from the Pokemon API
   // This field string will be default fields + additional fields (selected from the prior page)
-  const defaultFields: String = "id name imageSource type";
+  const defaultFields: String = defaultPokemonFields;
   const [ready, setReady] = useState(false);
   const [allFields, setAllFields] = useState("");
 
@@ -29,7 +30,7 @@ export const PokemonResult = ({ componentId }) => {
 
   useEffect(() => {
     initialising();
-  }, []);
+  });
 
   if (!ready) return <Loading />;
 

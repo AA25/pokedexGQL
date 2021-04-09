@@ -3,9 +3,12 @@
 a limited sample and selected additional data to be returned. This data is retured from a GraphQL API server (another project of mine, https://github.com/AA25/GraphQL-API hosted on AWS).
 Technologies/Libraries used were React Native, React Native Navigation, ApolloGraphql client, React Native Debugger and React Native AsyncStorage.
 
-- The design of this Pokedex application is heavly influenced by the first Pokedex that featured in the Pokemon show while also taking design inspirations from other works.
-
 ![](https://media.giphy.com/media/BCfrqGTqQOGFzFPd9f/giphy.gif)
+<img src="https://i.imgur.com/zu4afFE.jpg" width="234" height="480">
+<img src="https://imgur.com/NFMPfQn.jpg"  width="234" height="480">
+<img src="https://imgur.com/szUhu6y.jpg"  width="234" height="480">
+
+- The design of this Pokedex application is heavly influenced by the first Pokedex that featured in the Pokemon show while also taking design inspirations from other works.
 
 ## Cloning and running project for the first time (Only for Android for now)
 - React Native

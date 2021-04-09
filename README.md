@@ -7,6 +7,8 @@ Technologies/Libraries used were React Native, React Native Navigation, ApolloGr
 <img src="https://i.imgur.com/zu4afFE.jpg" width="234" height="480">
 <img src="https://imgur.com/NFMPfQn.jpg"  width="234" height="480">
 <img src="https://imgur.com/szUhu6y.jpg"  width="234" height="480">
+<img src="https://imgur.com/onAr0Z6.jpg"  width="234" height="480">
+<img src="https://imgur.com/Ybb8kXP.jpg"  width="234" height="480">
 
 - The design of this Pokedex application is heavly influenced by the first Pokedex that featured in the Pokemon show while also taking design inspirations from other works.
 

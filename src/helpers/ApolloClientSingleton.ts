@@ -1,5 +1,5 @@
 import { ApolloClient, ApolloClientOptions, InMemoryCache } from "@apollo/client";
-import { appConfig } from "./config";
+import { appConfig } from "../utilities/config";
 
 /**
  *
